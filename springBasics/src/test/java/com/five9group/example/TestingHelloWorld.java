@@ -13,7 +13,7 @@ public class TestingHelloWorld {
      	
      	FileSystemXmlApplicationContext  context2 = new FileSystemXmlApplicationContext("bean2.xml");
 		HelloWorld helloWorld2 = (HelloWorld) context2.getBean("helloWorld");
-     	helloWorld2.sayHello();
+     	helloWorld2.saybye();
      	context2.close();
      	
 	}
