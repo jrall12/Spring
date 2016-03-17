@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="helloWorld" name="helloWorld" class="com.five9group.example.HelloWorld">
+	</bean>
+	<!-- Property Injection -->
+	<bean id="propertyInjection" name="propertyInjection" class="com.five9group.example.PropertyInjection">
+		<property name="firstName" value="Bibhuti" />
+	</bean>
+	
+	<!-- Constructor Injection -->
+	<bean id = "renter" class= "com.five9group.example.Renter">
+	<constructor-arg  ref="car"></constructor-arg >
+	</bean>
+	
+	<bean id="car" name="car" class="com.five9group.example.Car">
+	 <property name="nameOfCar" value="BMW" />
+	 <property name="perDayCost" value="1000"/>
+	</bean>
+	<bean id="car2" name="car2" class="com.five9group.example.Car">
+		<property name="nameOfCar" value="Mazda"></property>
+		<property name="perDayCost" value="700"></property></bean>
+	<bean id="renter2" class="com.five9group.example.Renter">
+		<constructor-arg ref="car2"></constructor-arg></bean>
+</beans>
