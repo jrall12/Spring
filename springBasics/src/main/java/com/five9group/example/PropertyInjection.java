@@ -3,6 +3,7 @@ package com.five9group.example;
 public class PropertyInjection {
 
 	private String firstName;
+	private String lastName;
 
 	//Get and Set methods
 	public final String getFirstName() {
@@ -13,8 +14,15 @@ public class PropertyInjection {
 		this.firstName = firstName;
 	}
 	
+	public final String getLastName() {
+		return this.lastName;
+	}
+
+	public final void setLastName(final String lastName) {
+		this.lastName = lastName;
+	}
 	public void printName(){
-		System.out.println(this.firstName);
+		System.out.println(this.firstName + this.lastName);
 	}
 	
 }

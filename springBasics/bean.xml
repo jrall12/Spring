@@ -9,6 +9,7 @@
 	<!-- Property Injection -->
 	<bean id="propertyInjection" name="propertyInjection" class="com.five9group.example.PropertyInjection">
 		<property name="firstName" value="Bibhuti" />
+		<property name="lastName" value="Thapa" />
 	</bean>
 	
 	<!-- Constructor Injection -->
